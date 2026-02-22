@@ -1,0 +1,30 @@
+<!-- Main container (Bootstrap or custom container) -->
+<div class="container">
+
+  <!-- Wrapper for the list of subscribers -->
+  <div class="list-container">
+
+    <!-- Loop through the subscribers array passed from the controller -->
+    <% subscribers.forEach(s => { %>
+
+      <!-- Individual subscriber card -->
+      <div class="subscriber">
+
+        <!-- Display subscriber's name -->
+        <p>
+          <span class="item-label">Name:</span>
+          <%= s.name %> <!-- EJS tag outputs the subscriber's name -->
+        </p>
+
+        <!-- Display subscriber's email -->
+        <p>
+          <span class="item-label">Email:</span>
+          <%= s.email %> <!-- EJS tag outputs the subscriber's email -->
+        </p>
+
+      </div>
+
+    <% }); %>
+
+  </div>
+</div>

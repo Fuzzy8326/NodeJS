@@ -1,0 +1,59 @@
+<!-- Main container (likely using Bootstrap grid system) -->
+<div class="container">
+
+  <!-- Left column (6/12 width on small screens and larger) -->
+  <div class="col-sm-6">
+    
+    <!-- Image related to subscription/contact -->
+    <!-- Make sure the image exists in /public/images -->
+    <img src="images/graph.png" alt="Subscription graphic">
+
+  </div>
+
+  <!-- Right column (6/12 width on small screens and larger) -->
+  <div class="col-sm-6">
+
+    <!-- Page heading -->
+    <h1>Reach out to us!</h1>
+
+    <!-- Short description -->
+    <p>Enter your email if you're interested to learn more:</p>
+
+    <!-- Subscription form -->
+    <!-- action="/subscribe" sends form data to the Express POST route -->
+    <!-- method="post" ensures data is sent securely in the request body -->
+    <form class="subscription-form" action="/subscribe" method="post">
+
+      <!-- Name input -->
+      <label for="name">Name</label>
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Name">
+
+      <!-- Email input (browser validates correct email format automatically) -->
+      <label for="email">Email</label>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Email">
+
+      <!-- Zip Code input -->
+      <!-- pattern="[0-9]{5}" ensures exactly 5 digits -->
+      <label for="zipCode">Zip Code</label>
+      <input 
+        type="text" 
+        pattern="[0-9]{5}" 
+        name="zipCode" 
+        placeholder="Zip Code">
+
+      <!-- Submit button -->
+      <input type="submit" name="submit">
+
+    </form>
+
+    <!-- Closing message -->
+    <p>We'll get back to you soon!</p>
+
+  </div>
+</div>

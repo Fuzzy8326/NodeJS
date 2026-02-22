@@ -1,0 +1,43 @@
+<!-- Main container (Bootstrap layout container) -->
+<div class="container">
+
+  <!-- Left column (6/12 width on small screens and up) -->
+  <div class="col-sm-6">
+
+    <!-- Display image related to courses -->
+    <!-- Make sure image exists in /public/images -->
+    <img src="images/fruit.jpg" alt="Cooking ingredients">
+
+  </div>
+
+  <!-- Right column (6/12 width on small screens and up) -->
+  <div class="col-sm-6">
+
+    <!-- Main promotional heading -->
+    <h1 class="title">Learn to cook cutting edge food</h1>
+
+    <!-- Section title -->
+    <h1>Our Courses</h1>
+
+    <!-- 
+      Loop through the offeredCourses array.
+      This uses EJS templating syntax.
+      For each course object, display its title and cost.
+    -->
+    <% offeredCourses.forEach(course => { %>
+
+      <!-- Output course title -->
+      <h5>
+        <%= course.title %>
+      </h5>
+
+      <!-- Output course cost -->
+      <!-- <%= %> prints data to the page -->
+      <span>$
+        <%= course.cost %>
+      </span>
+
+    <% }); %>
+
+  </div>
+</div>

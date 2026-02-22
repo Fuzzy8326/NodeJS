@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Set character encoding for proper text display -->
+  <meta charset="utf-8">
+
+  <!-- Make page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+
+  <!-- Page title -->
+  <title>Confetti Cuisine</title>
+
+  <!-- Bootstrap CSS for layout and components -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  <!-- Custom CSS for Confetti Cuisine styles -->
+  <link rel="stylesheet" href="/css/confetti_cuisine.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <div id="nav">
+    
+    <!-- Left section: site title -->
+    <div class="col-sm nav-align">
+      <h1 id="title">Confetti Cuisine</h1>
+    </div>
+
+    <!-- Right section: navigation buttons -->
+    <div class="col-sm nav-align">
+      <a href="/">
+        <span class="button">Home</span>
+      </a>
+      <a href="/courses">
+        <span class="button">Courses</span>
+      </a>
+      <a href="/contact">
+        <span class="button">Contact</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <!-- 
+    EJS placeholder for page-specific content.
+    Each view rendered with this layout will be injected here.
+  -->
+  <%- body %>
+
+</body>
+
+</html>
