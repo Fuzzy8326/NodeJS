@@ -1,0 +1,39 @@
+Lesson 26
+
+1. run the following to create a new course: http://localhost:3000/courses/new
+2. run the following to see the courses: http://localhost:3000/courses
+3. after reading page 305 run json format to view allcourses in json format: http://localhost:3000/courses?format=json
+
+______________________________________________________________________________________________________
+
+Lesson 27:
+
+1. after reading page 313 run the following to see your status: http://localhost:3000/api/courses
+
+______________________________________________________________________________________________________
+
+Lesson 28:
+
+1. after reading page 325 run the following to see the status error: http://localhost:3000/api/courses
+
+2. To test out the example on page 327 uncomment the following in your models/user.js:
+   
+   1. apiToken       ( on like 27 to 29 )
+   2. userSchema.pre ( on line 69 to 73 )
+3. Then go to your controllers/usersController.js and uncomment the verifyToken ( on line 167 to 181)
+4. In your routes/apiRoutes.js uncomment router ( on line 7)
+5. create a new user: http://localhost:3000/users/new
+
+6. Comment everything again starting from step 2 until 4
+l\
+6. then whilst you application is running also open a new terminal for git bash:
+    1. page (330) copy the token that will be create when running the curl command below:
+      
+       curl -X POST http://localhost:3000/api/login -H "Content-Type: application/x-www-form-urlencoded" -d "email=your@email.com&password=12552"
+
+    2. page (332) copy the token like you see below:
+       
+       curl http://localhost:3000/api/courses -H "token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNjlhMDM1YmFjOTIxZjM0Nzg1N2FhMmIyIiwiZXhwIjoxNzcyMTk0MTE3NTEwLCJpYXQiOjE3NzIxMDc3MTd9.m-JlCuA9utLm0X-GNp8AWsnvuwYbCoYZMsIM2cEiRfo"
+
+_______________________________________________________________________________________________________
+   
